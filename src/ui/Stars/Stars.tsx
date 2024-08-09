@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Star } from "../Star/Star";
+import "./Stars.css"
 
 interface IStarsProps {
   count: number
@@ -13,5 +14,7 @@ export const Stars:FC<IStarsProps> = (props) => {
     view.push(<Star />)
   }
   }
-  return(view)
+  return(<ul className="card-body-stars u-clearfix">
+    {view}
+  </ul>)
 }
